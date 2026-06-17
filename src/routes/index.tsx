@@ -243,7 +243,7 @@ function Pillars() {
         <div className="max-w-2xl">
           <p className="tag-eyebrow">The six pillars of lifestyle medicine</p>
           <h2 className="mt-4 font-serif text-4xl text-ink sm:text-[2.75rem]">
-            Six places where the evidence is unusually clear.
+            Six places where the evidence is clear.
           </h2>
           <p className="mt-5 text-ink/75">
             Not a lifestyle. Not a vibe. Six clinical pillars with decades of research
