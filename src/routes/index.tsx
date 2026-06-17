@@ -149,9 +149,9 @@ function Hero() {
             that&rsquo;s where we work.
           </h1>
           <p className="mt-7 max-w-xl text-[1.075rem] text-ink/80">
-            Lifestyle Strategists helps people, practitioners, and organizations across
-            Canada adopt lifestyle medicine: the six evidence-based pillars of long-term
-            health, built into daily life through behavioural science—not pep talks.
+            At Lifestyle Strategists, we help people, practitioners, and organizations
+            adopt lifestyle medicine: the six evidence-based pillars of long-term
+            health, built into daily life through behavioural science.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
