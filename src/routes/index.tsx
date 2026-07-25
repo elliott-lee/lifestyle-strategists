@@ -347,10 +347,10 @@ function Closing() {
           looking for collaborators—we&rsquo;d like to hear from you.
         </p>
         <a
-          href="mailto:hello@lifestylestrategists.ca"
+          href="mailto:elliott.stuart.lee@gmail.com"
           className="mt-9 inline-flex items-center rounded-full bg-clinical px-7 py-3.5 text-sm font-semibold text-primary-foreground transition hover:bg-ink"
         >
-          hello@lifestylestrategists.ca
+          elliott.stuart.lee@gmail.com
         </a>
       </div>
     </section>
