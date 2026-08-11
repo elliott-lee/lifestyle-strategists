@@ -87,7 +87,6 @@ function Benefits() {
       headline: "Less burnout, more meaning.",
       body:
         "Clinicians trained in lifestyle medicine report renewed satisfaction in their work. They gain practical tools to help patients actually get better, instead of managing symptoms indefinitely.",
-      highlight: true,
     },
     {
       audience: "For medical facilities",
@@ -110,11 +109,7 @@ function Benefits() {
         {benefits.map((b) => (
           <article
             key={b.audience}
-            className={`rounded-xl border p-7 transition-colors ${
-              b.highlight
-                ? "border-clinical/20 bg-[color-mix(in_oklab,var(--color-clinical)_5%,var(--color-paper))]"
-                : "border-border/70 bg-paper hover:bg-card"
-            }`}
+            className="rounded-xl border border-border/70 bg-paper p-7 transition-colors hover:bg-card"
           >
             <div className="flex items-center gap-2 text-clinical">
               <span className="h-1.5 w-1.5 rounded-full bg-aqua" />
