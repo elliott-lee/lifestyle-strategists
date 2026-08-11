@@ -83,59 +83,16 @@ const pillars = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-paper text-ink font-sans">
-      <Nav />
+    <div className="bg-paper text-ink font-sans">
       <Hero />
       <Levels />
       <Pillars />
       <Behavioural />
       <Closing />
-      <Footer />
     </div>
   );
 }
 
-function Nav() {
-  return (
-    <header className="border-b border-border/70">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="/" className="flex items-center gap-2.5">
-          <Mark />
-          <span className="font-serif text-[1.05rem] tracking-tight text-ink">
-            Lifestyle Strategists
-          </span>
-        </a>
-        <nav className="hidden items-center gap-9 text-sm text-ink/70 md:flex">
-          <a href="#pillars" className="hover:text-clinical transition-colors">The six pillars</a>
-          <a href="#levels" className="hover:text-clinical transition-colors">Who we work with</a>
-          <a href="#science" className="hover:text-clinical transition-colors">Our approach</a>
-        </nav>
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center text-sm font-semibold text-clinical hover:text-ink transition-colors"
-        >
-          Get in touch →
-        </a>
-      </div>
-    </header>
-  );
-}
-
-function Mark() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
-      <circle cx="14" cy="14" r="12.5" fill="none" stroke="currentColor" strokeWidth="1.25" className="text-clinical" />
-      <path
-        d="M8 16 Q11 9 14 14 T20 12"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        className="text-aqua"
-      />
-    </svg>
-  );
-}
 
 function Hero() {
   return (
@@ -347,26 +304,12 @@ function Closing() {
           looking for collaborators—we&rsquo;d like to hear from you.
         </p>
         <a
-          href="mailto:hello@lifestylestrategists.ca"
+          href="mailto:elliott.stuart.lee@gmail.com"
           className="mt-9 inline-flex items-center rounded-full bg-clinical px-7 py-3.5 text-sm font-semibold text-primary-foreground transition hover:bg-ink"
         >
-          hello@lifestylestrategists.ca
+          elliott.stuart.lee@gmail.com
         </a>
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-border bg-paper">
-      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 py-10 text-sm text-ink/60 sm:flex-row sm:items-center">
-        <div className="flex items-center gap-2.5">
-          <Mark />
-          <span className="font-serif text-ink">Lifestyle Strategists</span>
-        </div>
-        <p>© {new Date().getFullYear()} Lifestyle Strategists. Made in Canada.</p>
-      </div>
-    </footer>
   );
 }
