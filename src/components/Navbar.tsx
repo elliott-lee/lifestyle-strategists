@@ -6,6 +6,7 @@ import { Mark } from "./Mark";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
+  { to: "/about", label: "About" },
 ];
 
 
