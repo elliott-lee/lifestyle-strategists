@@ -8,9 +8,13 @@ The navbar currently lists five items — Home, Services, The six pillars, Who w
 
 - Desktop nav: Home, Services only.
 - Mobile hamburger menu: Home, Services only.
-- Keep the "Get in touch" link as-is.
+- Keep the "Get in touch" link, but fix the type error it currently causes.
 - No changes to the home page content, the Services page, or any other file.
 
 ## Technical detail
 
-Edit `src/components/Navbar.tsx` only: trim the `navLinks` array to the `/` and `/services` entries. Both the desktop nav and the mobile menu render from that array, so one edit covers both.
+Edit `src/components/Navbar.tsx` only:
+
+- Trim the `navLinks` array to the `/` and `/services` entries. Both the desktop nav and the mobile menu render from that array, so one edit covers both.
+- The two "Get in touch" links use `<Link to="/#contact">`, which is not a valid route path and fails the typecheck. Change them to `<Link to="/" hash="contact">` so the hash is passed correctly.
+
