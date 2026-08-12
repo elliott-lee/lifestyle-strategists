@@ -6,10 +6,8 @@ import { Mark } from "./Mark";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
-  { to: "/#pillars", label: "The six pillars" },
-  { to: "/#levels", label: "Who we work with" },
-  { to: "/#science", label: "Our approach" },
 ];
+
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +35,8 @@ export function Navbar() {
         </nav>
 
         <Link
-          to="/#contact"
+          to="/"
+          hash="contact"
           className="hidden items-center text-sm font-semibold text-clinical transition-colors hover:text-ink md:inline-flex"
         >
           Get in touch →
@@ -68,7 +67,8 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              to="/#contact"
+              to="/"
+              hash="contact"
               onClick={() => setIsOpen(false)}
               className="py-2 font-semibold text-clinical transition-colors hover:text-ink"
             >
