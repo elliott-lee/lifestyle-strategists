@@ -67,7 +67,8 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              to="/#contact"
+              to="/"
+              hash="contact"
               onClick={() => setIsOpen(false)}
               className="py-2 font-semibold text-clinical transition-colors hover:text-ink"
             >
