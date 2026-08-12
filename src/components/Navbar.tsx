@@ -6,10 +6,8 @@ import { Mark } from "./Mark";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
-  { to: "/#pillars", label: "The six pillars" },
-  { to: "/#levels", label: "Who we work with" },
-  { to: "/#science", label: "Our approach" },
 ];
+
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
