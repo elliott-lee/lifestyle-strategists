@@ -59,9 +59,9 @@ function ServicesHero() {
           />
           <img
             src={servicesHero}
-            alt="Hand-drawn line illustration of a facilitator leading a small group workshop around a table"
-            width={1280}
-            height={960}
+            alt="Hand-drawn line illustration of a facilitator leading a small group wellness workshop"
+            width={1024}
+            height={1024}
             className="ink-illustration mx-auto w-full max-w-[560px]"
           />
         </div>
