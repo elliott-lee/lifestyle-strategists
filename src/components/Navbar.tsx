@@ -35,7 +35,8 @@ export function Navbar() {
         </nav>
 
         <Link
-          to="/#contact"
+          to="/"
+          hash="contact"
           className="hidden items-center text-sm font-semibold text-clinical transition-colors hover:text-ink md:inline-flex"
         >
           Get in touch →
