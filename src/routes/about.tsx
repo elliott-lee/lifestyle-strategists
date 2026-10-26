@@ -142,10 +142,10 @@ function CTA() {
           we&rsquo;d love to hear from you.
         </p>
         <a
-          href="mailto:elliott.stuart.lee@gmail.com"
+          href="mailto:hello@lifestylestrategists.ca"
           className="mt-9 inline-flex items-center rounded-full bg-clinical px-7 py-3.5 text-sm font-semibold text-primary-foreground transition hover:bg-ink"
         >
-          elliott.stuart.lee@gmail.com
+          hello@lifestylestrategists.ca
         </a>
       </div>
     </section>
