@@ -128,9 +128,10 @@ function Hero() {
             that&rsquo;s where we work.
           </h1>
           <p className="mt-7 max-w-xl text-[1.075rem] text-ink/80">
-            At Lifestyle Strategists, we help people, practitioners, and organizations put lifestyle
-            medicine into practice. Through behavioural science, applying the 6 FACE+S leads to
-            healthier, happier patients, practitioners, and organizations.
+            At Lifestyle Strategists, we bridge the gap between knowing what makes us healthy and
+            putting it into practice. Through behavioural science, we apply the six FACE+S of
+            Lifestyle Medicine, to help patients, practitioners, and organizations create lasting
+            change.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
