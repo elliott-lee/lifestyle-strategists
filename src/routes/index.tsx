@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "We help practitioners and organizations across Canada teach and apply FACE+S, a practical, behaviour-focused framing of the six pillars of lifestyle medicine.",
+          "Through behavioural science, applying the 6 FACE+S leads to healthier, happier patients, practitioners, and organizations.",
       },
       { property: "og:title", content: "Lifestyle Strategists" },
       {
@@ -35,7 +35,6 @@ const faces = [
     id: "fueling",
     letter: "F",
     name: "Fueling",
-    establishedPillar: "Healthful eating",
     colour: "bg-leaf/20",
     tag: "Nourishment, with room for real life.",
     image: faceFueling,
@@ -48,7 +47,6 @@ const faces = [
     id: "activity",
     letter: "A",
     name: "Activity and Exercise",
-    establishedPillar: "Physical activity",
     colour: "bg-amber-200/65",
     tag: "Everyday movement counts, too.",
     image: faceActivity,
@@ -61,7 +59,6 @@ const faces = [
     id: "centering",
     letter: "C",
     name: "Centering",
-    establishedPillar: "Stress management",
     colour: "bg-stone-200/80",
     tag: "Attention, meaning and room to respond.",
     image: faceCentering,
@@ -74,7 +71,6 @@ const faces = [
     id: "exposure-selection",
     letter: "E",
     name: "Exposure Selection",
-    establishedPillar: "Avoiding risky substances",
     colour: "bg-orange-200/65",
     tag: "Choose what supports health.",
     image: faceExposure,
@@ -87,7 +83,6 @@ const faces = [
     id: "positive-social-connection",
     letter: "+",
     name: "Positive Social Connection",
-    establishedPillar: "Social connection",
     colour: "bg-rose-200/65",
     tag: "Belonging is part of the work.",
     image: faceSocial,
@@ -100,7 +95,6 @@ const faces = [
     id: "sleep-conditioning",
     letter: "S",
     name: "Sleep Conditioning",
-    establishedPillar: "Restorative sleep",
     colour: "bg-blue-200/70",
     tag: "A routine your clock can recognise.",
     image: faceSleep,
@@ -135,8 +129,8 @@ function Hero() {
           </h1>
           <p className="mt-7 max-w-xl text-[1.075rem] text-ink/80">
             At Lifestyle Strategists, we help people, practitioners, and organizations put lifestyle
-            medicine into practice. FACE+S is our behaviour-focused framing of its six established
-            pillars, made practical through behavioural science.
+            medicine into practice. Through behavioural science, applying the 6 FACE+S leads to
+            healthier, happier patients, practitioners, and organizations.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
@@ -230,23 +224,12 @@ function Faces() {
     >
       <div id="faces" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24">
         <div className="max-w-3xl">
-          <p className="tag-eyebrow">A framework for clinicians and medical learners</p>
           <h2
             id="faces-heading"
-            className="mt-4 font-serif text-4xl leading-tight text-ink sm:text-[2.75rem]"
+            className="font-serif text-4xl leading-tight text-ink sm:text-[2.75rem]"
           >
             The 6 <span className="text-clinical">FACE+S</span> of Lifestyle Medicine
           </h2>
-          <p className="mt-5 text-ink/75">
-            A memorable, behaviour-focused way to teach and practise the six established pillars of
-            lifestyle medicine. FACE+S pairs the clinical foundations with a salutogenic question:
-            what helps generate and sustain health?
-          </p>
-          <p className="mt-4 text-ink/75">
-            Centering sits in the middle, the &ldquo;+&rdquo; stands for Positive Social Connection,
-            and Sleep Conditioning closes the sequence. Six areas to explore together, one feasible
-            next step at a time.
-          </p>
         </div>
 
         <nav aria-label="Explore the six FACE+S" className="mt-10">
@@ -315,59 +298,6 @@ function Faces() {
               </div>
             </article>
           ))}
-        </div>
-
-        <details className="mt-8 rounded-lg border border-border bg-paper p-6">
-          <summary className="cursor-pointer font-semibold text-clinical focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-clinical">
-            How FACE+S maps to the established pillars
-          </summary>
-          <div className="mt-5 overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <caption className="sr-only">
-                The six established lifestyle medicine pillars and their FACE+S framing
-              </caption>
-              <thead>
-                <tr className="border-b border-border">
-                  <th scope="col" className="py-3 pr-5 font-semibold">
-                    Established pillar
-                  </th>
-                  <th scope="col" className="py-3 font-semibold">
-                    FACE+S framing
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {faces.map((face) => (
-                  <tr key={face.id} className="border-b border-border last:border-b-0">
-                    <th scope="row" className="py-3 pr-5 font-normal text-ink/80">
-                      {face.establishedPillar}
-                    </th>
-                    <td className="py-3 text-ink/80">
-                      {face.letter === "+" ? "+ " : `${face.letter} · `}
-                      {face.name}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-4 text-sm text-ink/75">
-            FACE+S retains the established domains and broadens the teaching focus in Centering and
-            Exposure Selection. The evidence base varies by behaviour, population and outcome.
-          </p>
-        </details>
-
-        <div className="mt-10 max-w-3xl border-l-2 border-aqua pl-6">
-          <h3 className="font-serif text-2xl text-ink">Start with the person in front of you.</h3>
-          <p className="mt-3 text-[0.95rem] text-ink/80">
-            Explore identity, motivation, cues and friction. Agree on one small change that fits the
-            person&rsquo;s values, abilities and circumstances, then review what made it easier to
-            repeat.
-          </p>
-          <p className="mt-3 text-sm text-ink/75">
-            Restorative sleep, resilience and wellbeing are multifactorial. FACE+S keeps the
-            clinical focus on behaviours and conditions we can help people practise and modify.
-          </p>
         </div>
       </div>
     </section>

@@ -136,7 +136,7 @@ function Offerings() {
       label: "Bespoke training",
       for: "Healthcare organizations & clinics",
       body:
-        "We design and deliver training that helps clinical teams offer lifestyle medicine inside their existing workflows. We use FACE+S to teach the six established pillars, alongside behaviour-change conversations tailored to your setting, caseload and capacity.",
+        "We design and deliver training that helps clinical teams offer lifestyle medicine inside their existing workflows. We use the 6 FACE+S alongside behaviour-change conversations tailored to your setting, caseload and capacity.",
       features: [
         "Clinical team workshops",
         "Lifestyle medicine curriculum design",
