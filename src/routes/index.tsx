@@ -137,9 +137,9 @@ function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
               href="#faces"
-              className="inline-flex items-center gap-1.5 rounded-full bg-clinical px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-ink"
+              className="inline-flex items-center rounded-full bg-clinical px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-ink"
             >
-              Meet the 6 <FacesWordmark />
+              <span>Meet the 6 <FacesWordmark /></span>
             </a>
             <a
               href="#levels"
