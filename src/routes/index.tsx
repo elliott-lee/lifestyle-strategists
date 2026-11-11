@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { FacesPlus, FacesWordmark } from "@/components/FacesWordmark";
 import hero from "@/assets/hero.png";
 import faceFueling from "@/assets/pillar-nutrition.png";
 import faceActivity from "@/assets/face-activity.png";
@@ -129,16 +130,16 @@ function Hero() {
           </h1>
           <p className="mt-7 max-w-xl text-[1.075rem] text-ink/80">
             At Lifestyle Strategists, we bridge the gap between knowing what makes us healthy and
-            putting it into practice. Through behavioural science, we apply the six FACE+S of
-            Lifestyle Medicine, to help patients, practitioners, and organizations create lasting
-            change.
+            putting it into practice. Through behavioural science, we apply the six{" "}
+            <FacesWordmark /> of Lifestyle Medicine, to help patients, practitioners, and
+            organizations create lasting change.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
               href="#faces"
-              className="inline-flex items-center rounded-full bg-clinical px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-ink"
+              className="inline-flex items-center gap-1.5 rounded-full bg-clinical px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-ink"
             >
-              Meet the 6 FACE+S
+              Meet the 6 <FacesWordmark />
             </a>
             <a
               href="#levels"
@@ -229,7 +230,7 @@ function Faces() {
             id="faces-heading"
             className="font-serif text-4xl leading-tight text-ink sm:text-[2.75rem]"
           >
-            The 6 <span className="text-clinical">FACE+S</span> of Lifestyle Medicine
+            The 6 <span className="text-clinical"><FacesWordmark /></span> of Lifestyle Medicine
           </h2>
         </div>
 
@@ -245,7 +246,7 @@ function Faces() {
                     aria-hidden="true"
                     className={`flex h-14 w-14 items-center justify-center rounded-md font-serif text-3xl text-ink ${face.colour}`}
                   >
-                    {face.letter}
+                    {face.letter === "+" ? <FacesPlus /> : face.letter}
                   </span>
                   <span className="text-sm font-semibold leading-snug text-ink">
                     {face.letter === "+" && <span className="sr-only">Plus: </span>}
@@ -280,7 +281,7 @@ function Faces() {
                   aria-hidden="true"
                   className={`flex h-9 w-9 shrink-0 items-center justify-center rounded font-serif text-xl text-ink ${face.colour}`}
                 >
-                  {face.letter}
+                  {face.letter === "+" ? <FacesPlus /> : face.letter}
                 </span>
                 <h3
                   id={`face-${face.id}-heading`}

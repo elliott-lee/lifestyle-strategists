@@ -141,3 +141,16 @@
   /* Used to gently tint hand-drawn line art toward carbon ink without losing line quality */
   filter: contrast(1.05);
 }
+
+.faces-wordmark {
+  white-space: nowrap;
+}
+
+.faces-plus {
+  margin-inline: 0.055em;
+  font-family: var(--font-sans);
+  font-size: 1.3em;
+  font-weight: 700;
+  line-height: 0;
+  vertical-align: -0.035em;
+}
