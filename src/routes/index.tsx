@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import hero from "@/assets/hero.png";
-import pillarNutrition from "@/assets/pillar-nutrition.png";
-import pillarActivity from "@/assets/pillar-activity.png";
-import pillarStress from "@/assets/pillar-stress.png";
-import pillarSubstances from "@/assets/pillar-substances.png";
-import pillarSleep from "@/assets/pillar-sleep.png";
-import pillarSocial from "@/assets/pillar-social.png";
+import faceFueling from "@/assets/pillar-nutrition.png";
+import faceActivity from "@/assets/face-activity.png";
+import faceCentering from "@/assets/pillar-stress.png";
+import faceExposure from "@/assets/face-exposure-selection.png";
+import faceSocial from "@/assets/pillar-social.png";
+import faceSleep from "@/assets/face-sleep-conditioning.png";
 import habitSneakers from "@/assets/habit-sneakers.png";
 
 export const Route = createFileRoute("/")({
@@ -15,13 +15,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "We help people, practitioners, and organizations across Canada adopt lifestyle medicine through small, evidence-led habits across the six pillars of health.",
+          "Through behavioural science, applying the 6 FACE+S leads to healthier, happier patients, practitioners, and organizations.",
       },
       { property: "og:title", content: "Lifestyle Strategists" },
       {
         property: "og:description",
         content:
-          "Lifestyle medicine, built into daily habits. The six pillars, backed by behavioural science.",
+          "Meet the 6 FACE+S of Lifestyle Medicine: Fueling, Activity and Exercise, Centering, Exposure Selection, Positive Social Connection and Sleep Conditioning.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -30,54 +30,78 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const pillars = [
+const faces = [
   {
-    n: "01",
-    name: "Nutrition",
-    tag: "Mostly plants.",
-    image: pillarNutrition,
-    body:
-      "A whole-food, predominantly plant-based pattern—nutrient dense, rich in fibre, full of minimally processed vegetables, fruit, whole grains, legumes, nuts, and seeds—is one of the most studied tools in preventing and treating chronic disease.",
+    id: "fueling",
+    letter: "F",
+    name: "Fueling",
+    colour: "bg-leaf/20",
+    tag: "Nourishment, with room for real life.",
+    image: faceFueling,
+    alt: "Hand-drawn illustration of a bowl of vegetables and leafy greens",
+    body: "Dietary patterns built around diverse, predominantly plant-based, minimally processed foods. Emphasise whole foods, plant proteins, fibre-rich foods and unsaturated fats, with attention to mineral balance, nutritional adequacy, preferences and context.",
+    practice:
+      "Build on a familiar meal: add a plant protein or another vegetable. Familiar can be a useful starting point.",
   },
   {
-    n: "02",
-    name: "Movement",
-    tag: "A body that gets used.",
-    image: pillarActivity,
-    body:
-      "Regular, consistent physical activity counteracts the long, quiet harm of sitting. A weekly rhythm of general movement and purposeful exercise builds mental health, physical health, and resiliency you can feel.",
+    id: "activity",
+    letter: "A",
+    name: "Activity and Exercise",
+    colour: "bg-amber-200/65",
+    tag: "Everyday movement counts, too.",
+    image: faceActivity,
+    alt: "Hand-drawn illustration of a person moving outdoors with a dog",
+    body: "Movement patterns that combine frequent everyday activity, less sitting and structured exercise. Include aerobic, resistance and balance or neuromuscular training, adapted to health, function and ability. Everyday movement earns its place alongside the exercise plan.",
+    practice:
+      "Use a regular daily cue, such as finishing a phone call, for a brief movement break.",
   },
   {
-    n: "03",
-    name: "Stress",
-    tag: "Pressure, in the right dose.",
-    image: pillarStress,
-    body:
-      "A little stress sharpens us; too much corrodes mood, weight, sleep, and immunity. Learning to notice your own stress signals—and the small techniques that take the edge off—is a skill, not a personality trait.",
+    id: "centering",
+    letter: "C",
+    name: "Centering",
+    colour: "bg-stone-200/80",
+    tag: "Attention, meaning and room to respond.",
+    image: faceCentering,
+    alt: "Hand-drawn illustration of a person pausing in seated reflection",
+    body: "Practices that regulate attention and awareness, support cognitive control and emotional regulation, and cultivate positive psychological functioning. Include perspective-taking, gratitude, meaning, purpose, personally relevant spirituality and awe, extending stress management toward wellbeing and flourishing.",
+    practice:
+      "Invite a brief breathing pause or reflection on what matters before choosing one next action.",
   },
   {
-    n: "04",
-    name: "Substances",
-    tag: "Less of what costs you.",
-    image: pillarSubstances,
-    body:
-      "Tobacco, excess alcohol, opioids, and recreational drugs quietly raise the price of being alive. Cessation takes time, patience, and several attempts—support and the right approach matter more than willpower.",
+    id: "exposure-selection",
+    letter: "E",
+    name: "Exposure Selection",
+    colour: "bg-orange-200/65",
+    tag: "Choose what supports health.",
+    image: faceExposure,
+    alt: "Hand-drawn illustration of a person taking a break from their phone with a water bottle beside a leafy branch",
+    body: "Consider physical exposures via inhalation, ingestion and dermal or percutaneous routes, alongside psychological exposures such as digital media. Support smoke-free air, lower-risk substance choices, intentional media use and healthier settings, recognising access, context and the role of clinical support.",
+    practice:
+      "Explore one feasible substitution: an alcohol-free drink, a smoke-free setting or a bounded media habit.",
   },
   {
-    n: "05",
-    name: "Restorative sleep",
-    tag: "Seven to nine, most nights.",
-    image: pillarSleep,
-    body:
-      "Short sleep dulls attention, mood, satiety, and insulin sensitivity. Seven to nine hours is associated with optimal health; consistently fewer than six (or more than nine) is associated with greater mortality.",
+    id: "positive-social-connection",
+    letter: "+",
+    name: "Positive Social Connection",
+    colour: "bg-rose-200/65",
+    tag: "Belonging is part of the work.",
+    image: faceSocial,
+    alt: "Hand-drawn illustration of people sharing a conversation",
+    body: "Supportive, reciprocal relationships and a sense of belonging. Attend to social participation, access to support and relationship quality. Help people maintain regular contact, participate in a community, nurture respectful relationships and contribute to others in ways that fit their lives.",
+    practice:
+      "Choose one manageable act of connection: a check-in, shared activity or small act of kindness.",
   },
   {
-    n: "06",
-    name: "Social connection",
-    tag: "The people around the table.",
-    image: pillarSocial,
-    body:
-      "Positive relationships shape physical, mental, and emotional health. Social networks are not a sentimental footnote—they are one of the strongest reinforcers of every other healthy behaviour on this list.",
+    id: "sleep-conditioning",
+    letter: "S",
+    name: "Sleep Conditioning",
+    colour: "bg-blue-200/70",
+    tag: "A routine your clock can recognise.",
+    image: faceSleep,
+    alt: "Hand-drawn illustration of an awake person closing a book beside a bedside lamp as part of a wind-down routine",
+    body: "Behaviours and environmental conditions that support restorative sleep: morning light, regular sleep and wake timing, daytime activity, attention to caffeine and alcohol, a wind-down routine and a cool, dark, quiet bedroom. Address stimulus control and access to cognitive behavioural therapy for insomnia (CBT-I) when clinically indicated.",
+    practice:
+      "Agree on one achievable cue for a regular wind-down; assess persistent insomnia for appropriate care.",
   },
 ];
 
@@ -86,13 +110,12 @@ function Index() {
     <div className="bg-paper text-ink font-sans">
       <Hero />
       <Levels />
-      <Pillars />
+      <Faces />
       <Behavioural />
       <Closing />
     </div>
   );
 }
-
 
 function Hero() {
   return (
@@ -101,21 +124,21 @@ function Hero() {
         <div>
           <p className="tag-eyebrow">Lifestyle medicine · Canada</p>
           <h1 className="mt-6 font-serif text-[2.7rem] leading-[1.05] tracking-tight text-ink sm:text-[3.4rem] md:text-[3.9rem]">
-            Health is mostly{" "}
-            <span className="italic text-clinical">small, repeated habits</span>—so
+            Health is mostly <span className="italic text-clinical">small, repeated habits</span>—so
             that&rsquo;s where we work.
           </h1>
           <p className="mt-7 max-w-xl text-[1.075rem] text-ink/80">
-            At Lifestyle Strategists, we help people, practitioners, and organizations
-            adopt lifestyle medicine: the six evidence-based pillars of long-term
-            health, built into daily life through behavioural science.
+            At Lifestyle Strategists, we bridge the gap between knowing what makes us healthy and
+            putting it into practice. Through behavioural science, we apply the six FACE+S of
+            Lifestyle Medicine, to help patients, practitioners, and organizations create lasting
+            change.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
-              href="#pillars"
+              href="#faces"
               className="inline-flex items-center rounded-full bg-clinical px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-ink"
             >
-              Meet the six pillars
+              Meet the 6 FACE+S
             </a>
             <a
               href="#levels"
@@ -193,43 +216,87 @@ function Levels() {
   );
 }
 
-function Pillars() {
+function Faces() {
   return (
-    <section id="pillars" className="border-y border-border/70 bg-[color-mix(in_oklab,var(--color-paper)_60%,white)]">
-      <div className="mx-auto max-w-6xl px-6 py-24">
-        <div className="max-w-2xl">
-          <p className="tag-eyebrow">The six pillars of lifestyle medicine</p>
-          <h2 className="mt-4 font-serif text-4xl text-ink sm:text-[2.75rem]">
-            Six places where the evidence is clear.
+    <section
+      id="pillars"
+      aria-labelledby="faces-heading"
+      className="border-y border-border/70 bg-[color-mix(in_oklab,var(--color-paper)_60%,white)]"
+    >
+      <div id="faces" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24">
+        <div className="max-w-3xl">
+          <h2
+            id="faces-heading"
+            className="font-serif text-4xl leading-tight text-ink sm:text-[2.75rem]"
+          >
+            The 6 <span className="text-clinical">FACE+S</span> of Lifestyle Medicine
           </h2>
-          <p className="mt-5 text-ink/75">
-            Not a lifestyle. Not a vibe. Six clinical pillars with decades of research
-            behind them—and a thousand small ways to fit them into a real week.
-          </p>
         </div>
 
-        <div className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {pillars.map((p) => (
+        <nav aria-label="Explore the six FACE+S" className="mt-10">
+          <ol className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+            {faces.map((face) => (
+              <li key={face.id}>
+                <a
+                  href={`#face-${face.id}`}
+                  className="flex h-full flex-col items-center gap-3 rounded-lg px-3 py-4 text-center transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-clinical"
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`flex h-14 w-14 items-center justify-center rounded-md font-serif text-3xl text-ink ${face.colour}`}
+                  >
+                    {face.letter}
+                  </span>
+                  <span className="text-sm font-semibold leading-snug text-ink">
+                    {face.letter === "+" && <span className="sr-only">Plus: </span>}
+                    {face.name}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+
+        <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {faces.map((face) => (
             <article
-              key={p.n}
-              className="group flex flex-col gap-5 bg-paper p-7 transition-colors hover:bg-card"
+              key={face.id}
+              id={`face-${face.id}`}
+              aria-labelledby={`face-${face.id}-heading`}
+              className="flex scroll-mt-24 flex-col bg-paper p-7"
             >
               <div className="flex h-40 items-end justify-center">
                 <img
-                  src={p.image}
-                  alt={`Hand-drawn line illustration representing ${p.name}`}
+                  src={face.image}
+                  alt={face.alt}
                   width={640}
                   height={640}
                   loading="lazy"
-                  className="ink-illustration max-h-40 w-auto"
+                  className="ink-illustration max-h-40 max-w-full w-auto object-contain mix-blend-multiply"
                 />
               </div>
-              <div className="flex items-baseline justify-between border-t border-border pt-4">
-                <h3 className="font-serif text-[1.4rem] text-ink">{p.name}</h3>
-                <span className="font-serif text-xs italic text-slate-muted">{p.n}</span>
+              <div className="mt-6 flex min-h-20 items-start gap-3 border-t border-border pt-5">
+                <span
+                  aria-hidden="true"
+                  className={`flex h-9 w-9 shrink-0 items-center justify-center rounded font-serif text-xl text-ink ${face.colour}`}
+                >
+                  {face.letter}
+                </span>
+                <h3
+                  id={`face-${face.id}-heading`}
+                  className="font-serif text-[1.4rem] leading-tight text-ink"
+                >
+                  {face.name}
+                </h3>
               </div>
-              <p className="font-serif text-[1.02rem] italic text-clinical">{p.tag}</p>
-              <p className="text-[0.95rem] leading-relaxed text-ink/80">{p.body}</p>
+              <p className="mt-3 font-serif text-[1.02rem] italic text-clinical">{face.tag}</p>
+              <p className="mt-4 mb-6 text-[0.95rem] leading-relaxed text-ink/80">{face.body}</p>
+              <div className="mt-auto border-t border-border pt-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-clinical">
+                  A small nudge in practice
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-ink/80">{face.practice}</p>
+              </div>
             </article>
           ))}
         </div>
