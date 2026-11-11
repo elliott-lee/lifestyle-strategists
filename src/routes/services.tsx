@@ -80,7 +80,7 @@ function Benefits() {
       audience: "For patients",
       headline: "Greater health, longevity, and happiness.",
       body:
-        "Lifestyle medicine targets the behaviours that drive most chronic disease. When people eat better, move more, sleep deeper, and feel connected, outcomes improve—and they tend to stay improved.",
+        "Lifestyle medicine helps clinicians support behaviours that can improve health and wellbeing. FACE+S makes those conversations practical, from healthful eating and everyday movement to supportive relationships and the conditions for restorative sleep.",
     },
     {
       audience: "For practitioners",
@@ -136,7 +136,7 @@ function Offerings() {
       label: "Bespoke training",
       for: "Healthcare organizations & clinics",
       body:
-        "We design and deliver training that shows clinical teams how to offer lifestyle medicine inside their existing workflows. From the six pillars to behaviour-change conversations, we tailor content to your setting, your caseload, and your capacity.",
+        "We design and deliver training that helps clinical teams offer lifestyle medicine inside their existing workflows. We use FACE+S to teach the six established pillars, alongside behaviour-change conversations tailored to your setting, caseload and capacity.",
       features: [
         "Clinical team workshops",
         "Lifestyle medicine curriculum design",
