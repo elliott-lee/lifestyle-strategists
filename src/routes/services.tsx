@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { FacesWordmark } from "@/components/FacesWordmark";
 import servicesHero from "@/assets/services-hero.png";
 
 export const Route = createFileRoute("/services")({
@@ -79,8 +80,14 @@ function Benefits() {
     {
       audience: "For patients",
       headline: "Greater health, longevity, and happiness.",
-      body:
-        "Lifestyle medicine helps clinicians support behaviours that can improve health and wellbeing. FACE+S makes those conversations practical, from healthful eating and everyday movement to supportive relationships and the conditions for restorative sleep.",
+      body: (
+        <>
+          Lifestyle medicine helps clinicians support behaviours that can improve health and
+          wellbeing. <FacesWordmark /> makes those conversations practical, from healthful eating
+          and everyday movement to supportive relationships and the conditions for restorative
+          sleep.
+        </>
+      ),
     },
     {
       audience: "For practitioners",
@@ -135,8 +142,13 @@ function Offerings() {
     {
       label: "Bespoke training",
       for: "Healthcare organizations & clinics",
-      body:
-        "We design and deliver training that helps clinical teams offer lifestyle medicine inside their existing workflows. We use the 6 FACE+S alongside behaviour-change conversations tailored to your setting, caseload and capacity.",
+      body: (
+        <>
+          We design and deliver training that helps clinical teams offer lifestyle medicine inside
+          their existing workflows. We use the 6 <FacesWordmark /> alongside behaviour-change
+          conversations tailored to your setting, caseload and capacity.
+        </>
+      ),
       features: [
         "Clinical team workshops",
         "Lifestyle medicine curriculum design",
