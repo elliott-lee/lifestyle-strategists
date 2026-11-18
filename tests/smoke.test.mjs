@@ -114,13 +114,15 @@ test("sitemap returns XML listing the public routes", async () => {
   ]);
 });
 
-test("homepage image asset can be served", async () => {
-  const response = await fetch(baseUrl);
-  const html = await response.text();
-  const image = html.match(/<img\b[^>]*\bsrc="([^"]+)"/);
-  assert.ok(image, "homepage includes an image");
-  const asset = await fetch(new URL(image[1].replaceAll("&amp;", "&"), baseUrl));
-  assert.equal(asset.status, 200);
-  assert.match(asset.headers.get("content-type"), /^image\//);
-  assert.ok((await asset.arrayBuffer()).byteLength > 0, "image is nonempty");
-});
+for (const path of ["/", "/about", "/services"]) {
+  test(`${path} image asset can be served`, async () => {
+    const response = await fetch(new URL(path, baseUrl));
+    const html = await response.text();
+    const image = html.match(/<img\b[^>]*\bsrc="([^"]+)"/);
+    assert.ok(image, `${path} includes an image`);
+    const asset = await fetch(new URL(image[1].replaceAll("&amp;", "&"), baseUrl));
+    assert.equal(asset.status, 200);
+    assert.match(asset.headers.get("content-type"), /^image\//);
+    assert.ok((await asset.arrayBuffer()).byteLength > 0, "image is nonempty");
+  });
+}

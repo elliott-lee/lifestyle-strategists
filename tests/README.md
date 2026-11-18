@@ -9,7 +9,7 @@ response, and stops the server afterward. It checks:
 - Server-rendered content, titles, and navigation links for `/`, `/about`, and `/services`.
 - A missing route returns HTTP 404 and a link home.
 - The sitemap returns XML, the expected routes, and its cache header.
-- A homepage image returns nonempty image content.
+- The main image on `/`, `/about`, and `/services` returns nonempty image content.
 
 These are development-server HTTP checks. They do not exercise browser hydration,
 interactive controls, deployed hosting, or prove the absence of XSS vulnerabilities.
