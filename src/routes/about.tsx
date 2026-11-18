@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import headshotsAsset from "@/assets/headshots.jpeg.asset.json";
-
-const headshots = headshotsAsset.url;
+import headshots from "@/assets/team-portraits.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -61,7 +59,7 @@ function Hero() {
           <img
             src={headshots}
             alt="Hand-drawn ink portraits of Dr. Michelle Prentice and Dr. Elliott Lee"
-            width={1024}
+            width={1032}
             height={1024}
             className="ink-illustration mx-auto w-full max-w-[560px]"
           />
